@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+In this lab I setup my Github account. I had a JS file that thowed custom errors and I used Github to save the changes. 
 
-You can use the [editor on GitHub](https://github.com/tguthrie1765/cit281-lab7/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<br>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Here is the code for lab 7
+```js
+/*
+cit 281: lab 07
+author: Thomas Guthrie
+*/
 
-### Markdown
+class CustomError extends Error{
+    constructor(args){
+        super(args);
+        this.message='Error: custom error';
+    }
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function throwGenericError(){
+    throw new Error('Error: generic error');
+}
+function throwCustomError(){
+    throw new CustomError('custom error');
+}
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+console.log("force generic error");
+try{
+    console.log('generic error try block');
+    throwGenericError();
+} catch (err){
+    console.log('generic error catch block');
+    console.log(err.message);
+} finally{
+    console.log('generic error finally blocked');
+};
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+console.log('force custom error');
+try{
+    console.log('custom error try block');
+    throwCustomError();
+} catch (err){
+    console.log('custom error catch block');
+    console.log(err.message);
+} finally{
+    console.log('custom error final block');
+}
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tguthrie1765/cit281-lab7/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
