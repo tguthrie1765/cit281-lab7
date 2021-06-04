@@ -1,4 +1,4 @@
-![img github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![img github](https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png)
 
 In this lab I setup my Github account. I had a JS file that thowed custom errors and I used Github to save the changes. 
 
