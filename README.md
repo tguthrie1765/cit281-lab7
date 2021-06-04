@@ -1,3 +1,5 @@
+![img github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
 In this lab I setup my Github account. I had a JS file that thowed custom errors and I used Github to save the changes. 
 
 <br>
